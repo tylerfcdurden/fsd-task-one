@@ -7,12 +7,19 @@ import { SRC_DIR } from "../utils/constants";
 // Modules
 import * as modules from "../modules";
 
+// Env
+const env = process.env.NODE_ENV;
+
 // Common Cofig
 export default () => {
   return merge(
     {
-      entry: [SRC_DIR],
+      entry: {
+        main: [SRC_DIR],
+      },
     },
-    modules.setupHtml()
+    modules.useCleanPlugin(env),
+    modules.setupHtml(),
+    modules.loadStyles(env)
   );
 };
