@@ -19,7 +19,7 @@ export default () => {
       },
     },
     modules.useCleanPlugin(env),
-    modules.setupHtml(),
+    modules.setupPug(),
     modules.loadStyles(env)
   );
 };

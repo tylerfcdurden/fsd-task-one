@@ -14,7 +14,7 @@ export default () => {
     mode: "none",
     devtool: false,
     entry: {
-      main: ["webpack-hot-middleware/client"],
+      main: ["webpack-hot-middleware/client?reload=true"],
     },
     output: {
       filename: "[name].js",
