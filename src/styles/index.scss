@@ -1,3 +1,13 @@
+@import "./fonts.scss";
+@import "./imports.scss";
+@import "./ui.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: rgb(216, 117, 199);
+  background-color: rgb(255, 255, 255);
 }

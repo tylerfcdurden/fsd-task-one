@@ -20,6 +20,7 @@ export default () => {
     },
     modules.useCleanPlugin(env),
     modules.setupPug(),
-    modules.loadStyles(env)
+    modules.loadStyles(env),
+    modules.loadFonts()
   );
 };

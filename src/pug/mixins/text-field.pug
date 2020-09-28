@@ -1,0 +1,4 @@
+mixin text-field(label, placeholder, type, name,className)
+    div(class='text-field ' + className)
+        label.text-field__label(for=name)= label
+        input.text-field__input(id=name,placeholder=placeholder, type=type)

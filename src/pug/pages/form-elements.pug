@@ -1,0 +1,8 @@
+extends ../layout/main.pug
+
+block variables
+    - const title = "form elements";
+    - const pageClass = "ui";
+
+block content
+    +text-field('Email', 'Email', 'email', 'email','ui')
