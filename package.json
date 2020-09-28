@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --mode=none",
-    "common": "webpack -r esm --config=./webpack/config/webpack.common.js"
+    "common": "webpack -r esm --config=./webpack/config/webpack.common.js",
+    "dev": "webpack -r esm --config=./webpack/config/webpack.dev.js",
+    "prod": "webpack -r esm --config=./webpack/config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
