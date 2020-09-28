@@ -1,0 +1,20 @@
+{
+  "name": "fsd-task-one",
+  "version": "1.0.0",
+  "description": "fullstack development task one",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerfcdurden/fsd-task-one.git"
+  },
+  "author": "Ivanov Vadim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylerfcdurden/fsd-task-one/issues"
+  },
+  "homepage": "https://github.com/tylerfcdurden/fsd-task-one#readme"
+}
