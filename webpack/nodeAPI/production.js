@@ -1,5 +1,6 @@
 // Core
 import webpack from "webpack";
+import chalk from "chalk";
 
 // Prod Config
 import getProdConfig from "../config/webpack.prod";
@@ -9,6 +10,7 @@ const compiler = webpack(getProdConfig()); // Compiler Instance
 
 // Compilation
 compiler.run((err, stats) => {
+  // Configuration Errors
   if (err) {
     console.error(err.stack || err);
     if (err.details) {
@@ -17,20 +19,25 @@ compiler.run((err, stats) => {
     return;
   }
 
+  console.log(chalk.greenBright("Build is completed!"));
+
   const info = stats.toJson();
 
+  // Compilation Errors
   if (stats.hasErrors()) {
-    console.error(info.errors);
+    console.error(chalk.redBright(info.errors));
   }
 
+  // Compilation Warnings
   if (stats.hasWarnings()) {
-    console.warn(info.warnings);
+    console.warn(chalk.yellowBright(info.warnings));
   }
 
+  // Stats
   console.log(
     stats.toString({
-      chunks: false, // Makes the build much quieter
-      colors: true, // Shows colors in the console
+      chunks: false,
+      colors: true,
     })
   );
 });

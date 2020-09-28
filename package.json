@@ -9,7 +9,8 @@
     "common": "webpack -r esm --config=./webpack/config/webpack.common.js",
     "dev": "webpack -r esm --config=./webpack/config/webpack.dev.js",
     "prod": "webpack -r esm --config=./webpack/config/webpack.prod.js",
-    "build": "node -r esm ./webpack/nodeAPI/production.js"
+    "build": "node -r esm ./webpack/nodeAPI/production.js",
+    "start": "node -r esm ./webpack/nodeAPI/development.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,14 @@
     "app-root-path": "^3.0.0",
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
+    "html-webpack-plugin": "^4.5.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^5.1.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
