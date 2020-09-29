@@ -13,7 +13,6 @@
                 li.nav__item
                     a.nav__link(href="#") Новости
                 li.nav__item
-                    a.nav__link(href="#") Соглашения
-        .header__buttons
-            a.btn.btn_shallow.header__btn Войти
-            a.btn.btn_filled.header__btn Зарегистрироваться
+                    a.nav__link(href="#") Соглашение
+        +button('#', "btn btn_shallow header__btn", 'Войти')
+        +button('#', "btn btn_filled header__btn", 'Зарегистрироваться')

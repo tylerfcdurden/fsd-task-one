@@ -58,3 +58,42 @@
   left: 141px;
   top: 140px;
 }
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  @include button-text;
+  &_shallow {
+    position: relative;
+    width: 5rem;
+    height: 2rem;
+    background: rgb(255, 255, 255);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    color: $purple;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(188, 156, 255, 1),
+        rgba(139, 164, 249, 1)
+      );
+      z-index: -1;
+      border-radius: 22px;
+      margin: -2px;
+    }
+  }
+  &_filled {
+    color: rgb(255, 255, 255);
+    width: 196px;
+    height: 34px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  }
+}

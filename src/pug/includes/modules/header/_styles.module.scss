@@ -8,6 +8,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
 
   &__nav {
@@ -16,7 +18,7 @@
   }
   &__buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -41,24 +43,4 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.btn {
-  width: 87px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 22px;
-  color: $btn-text;
-  @include button-text;
-  &_shallow {
-    border: 2px solid $purple;
-    color: $purple;
-  }
-  &_filled {
-    width: 196px;
-    height: 34px;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  }
 }
