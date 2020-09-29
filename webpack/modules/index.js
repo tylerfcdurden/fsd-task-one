@@ -4,3 +4,4 @@ export * from "./useCleanPlugin";
 export * from "./setupPug";
 export * from "./loadFonts";
 export * from "./useCopyPlugin";
+export * from "./loadImages";

@@ -2,7 +2,7 @@
 import { merge } from "webpack-merge";
 
 // Constants
-import { SRC_DIR } from "../utils/constants";
+import { SRC_DIR, ASSETS_DIR } from "../utils/constants";
 
 // Modules
 import * as modules from "../modules";
@@ -18,9 +18,11 @@ export default () => {
         main: [SRC_DIR],
       },
     },
+    modules.useCopyPlugin(env),
     modules.useCleanPlugin(env),
     modules.setupPug(),
     modules.loadStyles(env),
-    modules.loadFonts()
+    modules.loadFonts(),
+    modules.loadImages()
   );
 };
